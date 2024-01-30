@@ -62,12 +62,22 @@ const Cart = () => {
 
             </div>
           </>
-        ) : (<div className="flex h-full flex-col items-center justify-center spcae-y-1">
+        ) : (<div className="flex h-full flex-col items-center justify-center space-y-1">
           <div className="relative mb-4 h-60 w-60 text-muted-foreground"
           aria-hidden='true'
           >
             <Image src="/hippo-empty-cart.png" alt="empty cart" fill />
           </div>
+          <div className="text-xl font-semibold">Your cart is empty</div>
+          <SheetTrigger asChild>
+              <Link href="/products" className={buttonVariants({
+                variant: "link",
+                size: 'sm',
+                className: "text-sm text-muted-foreground"
+              })}>
+                Add Items to your cart to checkout
+              </Link>
+          </SheetTrigger>
         </div>)}
       </SheetContent>
     </Sheet>
