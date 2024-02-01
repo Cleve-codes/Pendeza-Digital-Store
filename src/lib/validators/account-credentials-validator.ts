@@ -1,5 +1,3 @@
-import {useForm} from 'react-hook-form'
-import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod";
 
 export const AuthCredentialsValidator = z.object({
@@ -8,7 +6,3 @@ export const AuthCredentialsValidator = z.object({
 })
 
 export type TAuthCredentialsValidator = z.infer<typeof AuthCredentialsValidator>
-
-const { register, handleSubmit, formState: {errors} } = useForm<TAuthCredentialsValidator>({
-  resolver: zodResolver(AuthCredentialsValidator),
-})

@@ -20,6 +20,7 @@ const Page =() => {
 
   const onSubmit = ({email, password}: TAuthCredentialsValidator) => {
 
+    // Send data to server
   }
 
     return (
